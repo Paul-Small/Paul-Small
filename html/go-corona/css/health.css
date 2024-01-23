@@ -1,0 +1,121 @@
+.health {
+   background-color: #fafbfd;
+}
+
+.health__container {
+   padding: 150px 15px 50px 15px;
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+   position: relative;
+}
+
+/* Малюнок */
+.health__container::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   right: 252px;
+   transform: translate(100%, 0px);
+   width: 100vw;
+   height: 100%;
+   background-color: #ec5863;
+   border-radius: 30px 0px 0px 30px;
+}
+
+.health__content {
+   flex: 0 1 48%;
+   padding-right: 20px;
+}
+
+.health__block-body {
+   max-width: 400px;
+}
+
+.span-blue {
+   color: #4285F4;
+}
+
+.health__video {
+   flex: 1 1 100%;
+   padding-top: 60px;
+}
+
+.health-video {
+   display: inline-flex;
+   align-items: center;
+}
+
+.health-video__icon {
+   flex: 0 0 44px;
+}
+
+.health-video__body {
+   padding-left: 12px;
+}
+
+.health-video__title {
+   font-size: 13px;
+   line-height: 126%;
+   letter-spacing: 1px;
+   color: #b0b0b0;
+}
+
+.health-video__title:not(:last-child) {
+   margin-bottom: 5px;
+}
+
+.health-video__text {
+   text-transform: uppercase;
+   font-weight: 400;
+   font-size: 9px;
+   letter-spacing: 1px;
+   color: #000;
+}
+
+.health__image {
+   flex: 0 1 52%;
+   /* ширина картинки розділена на ширину контейнера, без падингів */
+   position: relative;
+   z-index: 2;
+}
+
+.health__image img {
+   max-width: 100%
+}
+
+@media (max-width:991.98px) {
+   .health__container::before {
+      right: 185px;
+      border-radius: 20px 0px 0px 20px;
+   }
+}
+
+@media (max-width:767.98px) {
+   .health__container {
+      padding: 100px 15px 30px 15px;
+   }
+
+   .health__container::before {
+      display: none;
+   }
+
+   .health__content {
+      flex: 1 1 100%;
+      padding-right: 0;
+   }
+
+   .health__block-body {
+      max-width: none;
+   }
+
+   .health__image {
+      flex: 1 1 100%;
+      text-align: center;
+      padding: 30px 0;
+   }
+
+   .health__video {
+      padding-top: 0;
+   }
+}
